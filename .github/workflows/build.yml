@@ -11,7 +11,7 @@ jobs:
           java-version: '17'
       - run: |
           chmod +x gradlew || true
-          gradle assembleDebug
+          gradle assembleDebug -Djava.awt.headless=true --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug
