@@ -9,9 +9,13 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
-      - run: |
+      - name: Build APK
+        env:
+          JAVA_TOOL_OPTIONS: "-Djava.awt.headless=true"
+          GRADLE_OPTS: "-Djava.awt.headless=true"
+        run: |
           chmod +x gradlew || true
-          gradle assembleDebug -Djava.awt.headless=true --no-daemon
+          gradle assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug
