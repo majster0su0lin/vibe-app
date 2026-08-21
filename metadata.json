@@ -1,0 +1,6 @@
+{
+  "name": "Orbital",
+  "description": "3D quantum electron orbital visualizer for hydrogen-like atoms and ions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
