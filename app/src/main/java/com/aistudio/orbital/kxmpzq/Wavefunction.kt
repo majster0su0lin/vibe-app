@@ -132,7 +132,7 @@ suspend fun generatePointCloud(
     // Validation Output (Dev-only)
     val radialNorm = checkRadialNormalization(n, l, Z)
     val radialNodes = n - l - 1
-    val species = "Element Z=$Z"
+    val species = getSpeciesName(Z)
     Log.d("OrbitalPhysics", "=== Orbital Generated: $species ($n, $l, $m) ===")
     Log.d("OrbitalPhysics", "Expected <r> = $rExp, Bounds = $bounds")
     Log.d("OrbitalPhysics", "Radial Nodes = $radialNodes, Angular Nodes = $l")
